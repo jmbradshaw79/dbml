@@ -5,6 +5,9 @@ export default {
   mysqlLegacy: {
     name: 'MySQL',
   },
+  spanner: {
+    name: 'Spanner',
+  },
   postgres: {
     name: 'PostgreSQL',
   },

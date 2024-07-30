@@ -10,6 +10,7 @@ function dbml2sql (args) {
     .usage('[options] <files...>')
     .option('--mysql')
     .option('--postgres')
+    .option('--spanner')
     .option('--mssql')
     .option('--oracle')
     .option('-o, --out-file <pathspec>', 'compile all input files into a single files');

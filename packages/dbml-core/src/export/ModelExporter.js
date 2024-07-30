@@ -4,6 +4,7 @@ import PostgresExporter from './PostgresExporter';
 import JsonExporter from './JsonExporter';
 import SqlServerExporter from './SqlServerExporter';
 import OracleExporter from './OracleExporter';
+import SpannerExporter from './SpannerExporter';
 
 class ModelExporter {
   static export (model = {}, format = '', isNormalized = true) {
@@ -22,6 +23,10 @@ class ModelExporter {
         res = PostgresExporter.export(normalizedModel);
         break;
 
+      case 'spanner':
+        res = SpannerExporter.export(normalizedModel);
+        break;
+      
       case 'json':
         res = JsonExporter.export(model, isNormalized);
         break;
